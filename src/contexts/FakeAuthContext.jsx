@@ -30,10 +30,10 @@ function AuthProvider({ children }) {
 
   function login(email, password) {
     if (email === FAKE_USER.email && password === FAKE_USER.password)
-      dispatch({ action: "login", payload: FAKE_USER });
+      dispatch({ type: "login", payload: FAKE_USER });
   }
   function logout() {
-    dispatch({ action: "logout" });
+    dispatch({ type: "logout" });
   }
 
   return (
